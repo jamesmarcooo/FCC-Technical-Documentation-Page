@@ -18,22 +18,74 @@
         <main id="main-doc">
             <section class="main-section" id="Introduction">
                 <header>Introduction</header>
+                <p>
+                    Cascading Stylesheets — or CSS — is the first technology you should start learning after HTML. While HTML is used to define the structure and semantics of your content, CSS is used to style it and lay it out. For example, you can use CSS to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.
+                </p>
             </section>
 
             <section class="main-section" id="Learning_pathway">
                 <header>Learning Pathway</header>
+                <p>You should learn the basics of HTML before attempting any CSS. We recommend that you work through our Introduction to HTML module first.</p>
+                <p>Once you understand the fundamentals of HTML, we recommend that you learn further HTML and CSS at the same time, moving back and forth between the two topics. This is because HTML is far more interesting and much more fun to learn when you apply CSS, and you can't really learn CSS without knowing HTML.</p>
+                <p>Before starting this topic, you should also be familiar with using computers and using the web passively (i.e., just looking at it, consuming the content). You should have a basic work environment set up as detailed in Installing basic software and understand how to create and manage files, as detailed in Dealing with files — both of which are parts of our Getting started with the web complete beginner's module.</p>
+                <p>It is also recommended that you work through Getting started with the web before proceeding with this topic, especially if you are completely new to web development. However, much of what is covered in its CSS basics article is also covered in our CSS first steps module, albeit in a lot more detail.</p>
             </section>
 
             <section class="main-section" id="Modules">
                 <header>Modules</header>
+                <ul>
+                    <li>Details</li>
+                    <li>CSS first steps</li>
+                    <li>CSS building blocks</li>
+                    <li>Styling text</li>
+                    <li>CSS layout</li>
+                </ul>
+                <p>This topic contains the following modules, in a suggested order for working through them. You should definitely start with the first one.</p>
+                <h4>CSS first steps</h4>
+                    <p id="indent">CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.</p>
+                <h4>CSS building blocks</h4>
+                    <p id="indent">This module carries on where CSS first steps left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, its time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.</p>
+                    <p id="indent">The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like text styling and CSS layout.</p>
+                <h4>Styling text</h4>
+                    <p id="indent">With the basics of the CSS language covered, the next CSS topic for you to concentrate on is styling text — one of the most common things you'll do with CSS. Here we look at text styling fundamentals, including setting font, boldness, italics, line and letter spacing, drop shadows and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.</p>
+                <h4>CSS layout</h4>
+                    <p id="indent">At this point we've already looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to place your boxes in the right place in relation to the viewport, and one another. We have covered the necessary prerequisites so we can now dive deep into CSS layout, looking at different display settings, modern layout tools like flexbox, CSS grid, and positioning, and some of the legacy techniques you might still want to know about.</p>
+                    <h5>Flexbox</h5>
+                        <p id="indent">Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces. This article explains all the fundamentals.</p>
+                        <h6>Specifying what elements to lay out as flexible boxes</h6>
+                            <p id="indent">To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of display on the parent element of the elements you want to affect. In this case we want to lay out the < article> elements, so we set this on the < section>:</p>
+                            <code>section { display: flex;}</code>
+                        <h6>Columns or rows?</h6>
+                            <p id="indent">Try adding the following declaration to your < section> rule:</p>
+                            <code>flex-direction: column;</code>
+                        <h6>Wrapping</h6>
+                            <p id="indent">One issue that arises when you have a fixed amount of width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our flexbox-wrap0.html example, and try viewing it live (take a local copy of this file now if you want to follow along with this example):</p>
+                            <p id="indent">Here we see that the children are indeed breaking out of their container. One way in which you can fix this is to add the following declaration to your < section> rule:</p>
+                            <code>flex-wrap: wrap;</code>
+                            <p id="indent">Also, add the following declaration to your < article> rule:</p>
+                            <code>flex: 200px;</code>
+                        <h6>Horizontal and vertical alignment</h6>
+                            <p id="indent">You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example — flex-align0.html (see it live also) — which we are going to turn into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar, with some buttons jammed into the top left-hand corner.</p>
+                            <p id="indent">First, take a local copy of this example. Now, add the following to the bottom of the example's CSS:</p>
+                            <code>div { <br>
+                                display: flex;<br>
+                                align-items: center;<br>
+                                justify-content: space-around;<br>
+                              }</code>
+
+                
             </section>
 
             <section class="main-section" id="Solving_common_CSS_problems">
                 <header>Solving Common CSS Problems</header>
+                <p id="indent">Use CSS to solve common problems provides links to sections of content explaining how to use CSS to solve very common problems when creating a web page.</p>
+                <p id="indent">From the beginning, you'll primarily apply colors to HTML elements and their backgrounds; change the size, shape, and position of elements; and add and define borders on elements. But there's not much you can't do once you have a solid understanding of even the basics of CSS. One of the best things about learning CSS is that once you know the fundamentals, usually you have a pretty good feel for what can and can't be done, even if you don't actually know how to do it yet!</p>
             </section>
             
             <section class="main-section" id="See_also">
                 <header>See Also</header>
+                <h4>CSS on MDN</h4>
+                <p id="indent">The main entry point for CSS documentation on MDN, where you'll find detailed reference documentation for all features of the CSS language. Want to know all the values a property can take? This is a good place to go.</p>
             </section>
         </main>
     </body>

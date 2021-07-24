@@ -17,6 +17,10 @@ nav {
   border-right: 2px solid #777;
 }
 
+nav header {
+  padding: 15px;
+}
+
 nav a {
   border-top: 1px solid #777;
   color: #000;
@@ -27,10 +31,49 @@ nav a {
 
 main {
   flex: 1;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+section {
+  padding: 20px;
+  line-height: 1.5;
 }
 
 header {
   font-size: 24px;
   font-weight: 530;
-  padding: 15px;
+}
+
+#indent {
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+h4 {
+  margin-bottom: 0px;
+}
+
+code {
+  display: block;
+  background-color: #f4f4f4;
+  border-left: 6px solid #005282;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 24px;
+  max-width: 100%;
+  overflow: auto;
+  padding: 24px;
+  width: 100%;
+  margin-left: 10px;
+}
+
+h5 {
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+
+h6 {
+  font-size: 13px;
+  margin-bottom: 0px;
 }
